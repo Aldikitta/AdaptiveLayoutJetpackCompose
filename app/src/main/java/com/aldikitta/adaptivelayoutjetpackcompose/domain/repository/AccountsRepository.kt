@@ -1,0 +1,13 @@
+package com.aldikitta.adaptivelayoutjetpackcompose.domain.repository
+
+import com.aldikitta.adaptivelayoutjetpackcompose.domain.model.Account
+import kotlinx.coroutines.flow.Flow
+
+/**
+ * An Interface contract to get all accounts info for User.
+ */
+interface AccountsRepository {
+    fun getDefaultUserAccount(): Flow<Account>
+    fun getAllUserAccounts(): Flow<List<Account>>
+    fun getContactAccountByUid(uid: Long): Flow<Account>
+}

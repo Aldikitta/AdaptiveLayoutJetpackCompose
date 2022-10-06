@@ -1,4 +1,4 @@
-package com.aldikitta.adaptivelayoutjetpackcompose
+package com.aldikitta.adaptivelayoutjetpackcompose.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

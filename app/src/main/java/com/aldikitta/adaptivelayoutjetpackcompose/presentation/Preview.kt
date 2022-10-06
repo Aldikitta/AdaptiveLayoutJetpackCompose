@@ -1,4 +1,4 @@
-package com.aldikitta.adaptivelayoutjetpackcompose
+package com.aldikitta.adaptivelayoutjetpackcompose.presentation
 
 import android.content.res.Configuration.UI_MODE_NIGHT_NO
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
