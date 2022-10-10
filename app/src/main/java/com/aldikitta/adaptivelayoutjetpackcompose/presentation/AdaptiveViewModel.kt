@@ -7,6 +7,7 @@ import com.aldikitta.adaptivelayoutjetpackcompose.domain.model.Email
 import com.aldikitta.adaptivelayoutjetpackcompose.domain.repository.EmailsRepository
 import com.aldikitta.adaptivelayoutjetpackcompose.presentation.utils.ReplyContentType
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.launch
@@ -15,11 +16,11 @@ class AdaptiveViewModel(private val emailsRepository: EmailsRepository = EmailsR
     ViewModel() {
     // UI state exposed to the UI
     private val _uiState = MutableStateFlow(AdaptiveHomeUIState(loading = true))
-//    val uiState: StateFlow<AdaptiveHomeUIState> = _uiState
-    val uiState = _uiState.asStateFlow()
+    val uiState: StateFlow<AdaptiveHomeUIState> = _uiState
+//    val uiState = _uiState.asStateFlow()
 
     init {
-
+        observeEmails()
     }
 
     private fun observeEmails(){
